@@ -11,7 +11,8 @@
 |
 */
 
-
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'Controller@get');
+Route::get('/', function () {
+    return view('welcome')->withErrors(['title' => "This is an error message"]);
+});
